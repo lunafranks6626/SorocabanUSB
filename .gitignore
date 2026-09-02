@@ -1,3 +1,7 @@
+#PyCharm
+/shelf/
+/workspace.xml
+
 # Python
 __pycache__/
 *.pyc

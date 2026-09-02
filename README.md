@@ -1,33 +1,10 @@
-![image](https://github.com/user-attachments/assets/d214504e-020e-4f74-a836-f5b84981dccd)
-
 <div align="center">
 
-```
-╔═══════════════════════════════════════════════════════════════╗
-║  ██████╗  █████╗ ██████╗ ██╗  ██╗███████╗███████╗ ██████╗     ║
-║  ██╔══██╗██╔══██╗██╔══██╗██║ ██╔╝██╔════╝██╔════╝██╔════╝     ║
-║  ██║  ██║███████║██████╔╝█████╔╝ ███████╗█████╗  ██║          ║
-║  ██║  ██║██╔══██║██╔══██╗██╔═██╗ ╚════██║██╔══╝  ██║          ║
-║  ██████╔╝██║  ██║██║  ██║██║  ██╗███████║███████╗╚██████╗     ║
-║  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝ ╚═════╝     ║
-║      ███╗   ██╗██╗ ██████╗ ██╗  ██╗████████╗                  ║
-║      ████╗  ██║██║██╔════╝ ██║  ██║╚══██╔══╝                  ║
-║      ██╔██╗ ██║██║██║  ███╗███████║   ██║                     ║
-║      ██║╚██╗██║██║██║   ██║██╔══██║   ██║                     ║
-║      ██║ ╚████║██║╚██████╔╝██║  ██║   ██║                     ║
-║      ╚═╝  ╚═══╝╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝                     ║
-║          ██████╗ ██╗      █████╗ ██████╗ ███████╗             ║
-║          ██╔══██╗██║     ██╔══██╗██╔══██╗██╔════╝             ║
-║          ██████╔╝██║     ███████║██║  ██║█████╗               ║
-║          ██╔══██╗██║     ██╔══██║██║  ██║██╔══╝               ║
-║          ██████╔╝███████╗██║  ██║██████╔╝███████╗             ║
-║          ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═════╝ ╚══════╝             ║
-╚═══════════════════════════════════════════════════════════════╝
-```
+# sorocobanUSB
 
-# **USB Army Knife Exploitation Framework**
+## **USB Army Knife Penetration testing tool**
 
-### *"The blade that cuts through digital darkness"*
+### *This project is a (or at least is intended to be) a rewriting of the "DarkSec NightBlade" project that came before it with improved code quality, documentation and defluffing*
 
 ![Version](https://img.shields.io/badge/version-2.0-red.svg)
 ![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20macOS%20%7C%20Windows-blue.svg)
@@ -36,38 +13,18 @@
 
 </div>
 
+
 ---
 
-## 🗡️ Overview
+## Overview
 
 A command-center for USB HID operations, payload crafting, wireless attack tooling, and a security‑hardened C2—designed to pair with **USB Army Knife** (LILYGO T‑Dongle S3) and other devices.
 
-### Core Idea
+## "Why bother with a fork and rewrite just raise an issue!"
 
-NightBlade is your cockpit: build DuckyScripts, flash devices, deploy agents via HID droppers, and orchestrate targets through the integrated C2. Use the device's AP/WebUI (4.3.2.1:8080) to upload autorun DuckyScripts; the runtime agent then talks to NightBlade C2 over your chosen network path (direct or ngrok).
+I was having certain issues trying to make use of the functionality that the preceding project can provide and while yes, raising an issue may have resolved this. The combination of vibe coding and a lack of documentation made me much more comfortable just rewriting the entire thing.
 
-### ✨ Highlights
-
-- ✅ Full GUI (`installer_gui.py`) + compact UI (`smallgui.py`) for small screens
-- ✅ DuckyScript editor, syntax highlighting, linter, payload library
-- ✅ WiFi/Bluetooth attack panels (scan, quick actions)
-- ✅ Obfuscation and social‑engineering helpers
-- ✅ Profiles, Serial monitor, eFuse tools, Dashboard analytics
-- ✅ Security‑hardened C2 (Flask + WebSocket) with API keys, rate limiting, audit logging
-- ✅ Cross‑platform agent (Linux/macOS/Windows) + ready‑made HID droppers
-- ✅ **Windows persistence**: HKCU/Task/Service
-- ✅ **Linux/macOS persistence**: systemd/LaunchAgent
-
-### What NightBlade Is/Is Not
-
-| ✅ **Is** | ❌ **Is Not** |
-|-----------|---------------|
-| A controller and toolkit for authorized security testing and research | A magical "USB autorun" bypass—modern Windows disables USB AutoRun |
-| Enterprise-grade C2 with HID delivery Delivery is via HID keystrokes (DuckyScript) while the session is unlocked|  |
-
----
-
-## 🚀 Quick Start (Local Dev)
+## Quick Start (Local Dev)
 
 ### 1. Install Dependencies
 
@@ -115,7 +72,7 @@ venv/bin/python c2_server/c2_server.py --port 8443
 
 ---
 
-## 🤖 Agent Workflow (Recommended)
+## Agent Workflow (Recommended)
 
 ### Step 1: Build Agent
 
@@ -180,7 +137,7 @@ python3 -m http.server 8000
 
 ---
 
-## 🔐 Persistence Options
+## Persistence Options
 
 ### Windows
 
@@ -240,7 +197,7 @@ launchctl list | grep darkblade
 
 ---
 
-## 🔧 USB Army Knife Integration
+## USB Army Knife Integration
 
 **Device AP/WebUI:** `4.3.2.1:8080`
 - For uploading/managing DuckyScripts
@@ -257,28 +214,16 @@ launchctl list | grep darkblade
 
 ---
 
-## 🛡️ Security & Legal
+###  LEGAL NOTICE
 
-### ⚠️ LEGAL NOTICE
+**SorocobanUSB** is designed exclusively for authorized security testing, penetration testing, and red team operations. **Unauthorized access to computer systems is illegal.**
 
-**DarkSec NIGHTBLADE** is designed exclusively for authorized security testing, penetration testing, and red team operations. **Unauthorized access to computer systems is illegal.**
-
-- ✅ Obtain proper authorization before deployment
-- ✅ DarkSec Labs assumes no liability for misuse
-- ✅ Comply with all applicable laws and regulations
-
-### OPSEC Considerations:
-
-- Use jitter and variable sleep intervals
-- Route traffic through proxies/Tor if needed
-- Rotate API keys regularly
-- Use ngrok or reverse proxies for obfuscation
-- Minimize forensic artifacts (userland persistence preferred)
-- Expect AV/EDR scrutiny; obfuscate/encrypt payloads as needed
+- Obtain proper authorization before deployment
+- Neither I nor DarkSec Labs assumes no liability for misuse
 
 ---
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 ### No Beacon Appears
 - Verify `C2_URL` is reachable from target
@@ -306,7 +251,7 @@ launchctl list | grep darkblade
 
 ---
 
-## 📂 Files of Interest
+## Files of Interest
 
 | File | Description |
 |------|-------------|
@@ -320,7 +265,7 @@ launchctl list | grep darkblade
 
 ---
 
-## 💡 Operational Tips
+## Operational Tips
 
 ```bash
 # Use ngrok for quick external C2 access
@@ -346,19 +291,15 @@ pyinstaller -F --onefile --windowed -n db-agent agents/db_agent.py
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
-- [ ] One-click "Build & Self-Test" in Agent tab
-- [ ] PyInstaller integration + local run + beacon validation
-- [ ] Expanded device support beyond USB Army Knife
-- [ ] Optional encrypted transport (TLS/mTLS)
-- [ ] Domain fronting presets for CDN-based C2
+This one is to be documented bear with me
 
 ---
 
-## 🙏 Credits
+## Credits
 
-**Developed by DarkSec Labs**
+*Inspired by and Based on NightBlade by DarkSec Labs*
 
 Special thanks to:
 - [i-am-shodan](https://github.com/i-am-shodan) and the [USBArmyKnife](https://github.com/i-am-shodan/USBArmyKnife) project for the incredible hardware foundation
@@ -369,13 +310,13 @@ Special thanks to:
 
 ---
 
-## ⚠️ Legal Disclaimer
+##  Legal Disclaimer
 
 ```
 ╔═══════════════════════════════════════════════════════════════╗
-║                    ⚠️  LEGAL DISCLAIMER                       ║
+║                      LEGAL DISCLAIMER                         ║
 ║                                                               ║
-║  DarkSec NIGHTBLADE is designed exclusively for authorized    ║
+║  sorocobanUSB is designed exclusively for authorized            ║
 ║  security testing, penetration testing, and red team          ║
 ║  operations. Unauthorized access to computer systems is       ║
 ║  illegal.                                                     ║
@@ -391,11 +332,3 @@ Special thanks to:
 
 ---
 
-<div align="center">
-
-### **DarkSec NIGHTBLADE v2.0**  
-*From DarkSec Labs - Forging the future of offensive security*
-
-⚔️ **The blade that cuts through digital darkness** ⚔️
-
-</div>
