@@ -1,6 +1,7 @@
 # Core GUI and Serial Communication
 pyserial>=3.5
 ttkbootstrap>=1.10.1
+platformio>=6.1,<7
 
 # ESP32 Flashing
 esptool>=5.0.0
