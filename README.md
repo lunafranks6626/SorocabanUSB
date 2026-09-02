@@ -1,6 +1,6 @@
 <div align="center">
 
-# sorocobanUSB
+# SorocobanUSB
 
 ## **USB Army Knife Penetration testing tool**
 
