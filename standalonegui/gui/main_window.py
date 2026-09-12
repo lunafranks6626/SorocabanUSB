@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("SorocabanUSB")
+        self.setWindowTitle("Sorocaban USB")
         self.resize(1000,650)
 
         # Main Widget
