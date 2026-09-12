@@ -1,0 +1,8 @@
+/*Global*/
+
+QWidget {
+    background-color: #121212;
+    color: #E6E6E6;
+    font-family: "Segoe UI";
+    font-size 14px;
+}
